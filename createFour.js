@@ -17,9 +17,19 @@ var __imgYellow = new Image();
 var __codeBox;
 var __running = false;
 
+var __loaded = 0;
+
 __imgClear.src = "resources/clear.png";
 __imgRed.src = "resources/red.png";
 __imgYellow.src = "resources/yellow.png";
+
+function __load() {
+	__loaded++;
+}
+
+__imgClear.onload = __load
+__imgRed.onload = __load
+__imgYellow.onload = __load
 
 var __imgMap = [ // did all this for a meme, congrats me (USES Y then X, not X then Y!!!!)
 	[[240, 293], [270, 290], [300, 287], [329, 285], [357, 281], [385, 279], [414, 277]],
@@ -39,9 +49,6 @@ var __keyboard = {};
 var __keybinds = [38, 40, 37, 39, 32];
 
 var __time = 0;
-
-var setup = function() {};
-var update = function() {};
 
 var button = new Array(5);
 
@@ -107,14 +114,15 @@ $(function() {
 	
 	__board = $("#board")[0].getContext("2d");
 	
-	// h
+	// Reset and show board
 	__reset();
-	
 	__updatePixels();
 });
 
 function __start() {
 	__running = true;
+	
+	__stop();
 	
 	setup();
 	
