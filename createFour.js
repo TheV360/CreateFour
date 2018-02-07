@@ -7,7 +7,7 @@
 	     F     O    U     R       | 
 */
 
-var __version = "v0.2.1";
+var __version = "v0.2.5";
 
 var __title = "Create Four";
 var __subtitle = "The Classic 7x6 Fantasy Console";
@@ -171,7 +171,7 @@ $(function() {
 	});
 	
 	$("#hide").click(function() {
-		$(".guidecontent").toggleClass("hidden");
+		$(".guide").toggleClass("hidden");
 	});
 	
 	__board = $("#board")[0].getContext("2d");
