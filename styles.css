@@ -3,8 +3,8 @@
 */
 
 @font-face {
-    font-family: "connectFour";
-    src: url("resources/ConnectFourFont.ttf");
+	font-family: "connectFour";
+	src: url("resources/ConnectFourFont.ttf");
 }
 
 * {
