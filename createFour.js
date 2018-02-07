@@ -25,6 +25,7 @@ __imgYellow.src = "resources/yellow.png";
 
 function __load() {
 	__loaded++;
+	if (__loaded > 2) __loaded = true
 }
 
 __imgClear.onload = __load
@@ -120,18 +121,20 @@ $(function() {
 });
 
 function __start() {
-	__running = true;
-	
 	__stop();
-	
-	setup();
-	
-	window.requestAnimationFrame(__loop);
+	__running = true;
+	window.requestAnimationFrame(__enterLoop);
 }
 
 function __stop() {
 	__running = false;
 	window.cancelAnimationFrame(__loop);
+}
+
+function __enterLoop() {
+	setup();
+	__loop();
+	window.requestAnimationFrame(__loop);
 }
 
 function __loop() {
