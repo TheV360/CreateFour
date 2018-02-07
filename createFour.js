@@ -309,8 +309,8 @@ function text(s, x, y, c = getColor()) {
 	for (i = 0; i < s.length; i++) {
 		if (s[i] in __fontMap) {
 			for (j = 0; j < __fontMap[s[i]].length; j++) {
-				cx = x + __fontMap[s[i]][0];
-				cy = y + __fontMap[s[i]][1];
+				cx = x + __fontMap[s[i]][j][0];
+				cy = y + __fontMap[s[i]][j][1];
 				
 				if (cx > 0 && cx < __boardWidth && cy > 0 && cy < __boardHeight) setPixel(cx, cy);
 			}
