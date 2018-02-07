@@ -1,4 +1,13 @@
-var __version = "v0.1.2";
+/*
+	###  ###  ###  ###  ###  ###  | 
+	#    # #  #    # #   #   #    | By
+	#    ##   ##   ###   #   ##   | V360
+	#    # #  #    # #   #   #    | 
+	###  # #  ###  # #   #   ###  | @TheV360gameDev
+	     F     O    U     R       | 
+*/
+
+var __version = "v0.1.5";
 
 var __title = "Create Four";
 var __subtitle = "The Classic 7x6 Fantasy Console";
@@ -27,7 +36,7 @@ __imgYellow.src = "resources/yellow.png";
 
 function __load() {
 	__loaded++;
-	if (__loaded > 2) __loaded = true
+	if (__loaded > 2) __updatePixels();
 }
 
 __imgClear.onload = __load
@@ -135,7 +144,9 @@ function __stop() {
 
 function __enterLoop() {
 	__running = true;
+	__reset();
 	setup();
+	__updatePixels();
 	window.requestAnimationFrame(__loop);
 }
 
@@ -168,6 +179,41 @@ function __reset() {
 	}
 }
 
+function __updatePixels() {
+	__board.drawImage(__imgClear, 0, 0);
+
+	for (j = 0; j < __boardHeight; j++) {
+		for (i = 0; i < __boardWidth; i++) {
+			if (__boardColor[i][j] < 0 || __boardColor[i][j] > 2)
+				console.log(__boardColor[i][j] + " is not a color...");
+			if (__boardColor[i][j] == 1)
+				__board.drawImage(__imgRed, __imgMap[j][i][0], __imgMap[j][i][1], 29, 37, __imgMap[j][i][0], __imgMap[j][i][1], 29, 37);
+			if (__boardColor[i][j] == 2)
+				__board.drawImage(__imgYellow, __imgMap[j][i][0], __imgMap[j][i][1], 29, 37, __imgMap[j][i][0], __imgMap[j][i][1], 29, 37);
+		}
+	}
+
+	__board.font = "96px connectFour";
+	__board.textBaseline = "middle";
+	__board.textAlign = "center";
+
+	__board.fillStyle = "#afcfef";
+	__board.fillText(__title, 309, 66);
+
+	__board.fillStyle = "white";
+	__board.fillText(__title, 307, 64);
+
+	__board.font = "12px sans-serif";
+	__board.fillStyle = "yellow";
+	__board.fillText(__subtitle, 307, 136);
+
+	__board.textBaseline = "alphabetic";
+	__board.textAlign = "left";
+	__board.fillStyle = "black";
+
+	__board.fillText(__author, 4, 616);
+}
+
 function resetTime() {
 	__time = 0;
 }
@@ -182,41 +228,6 @@ function clearPixels(c = 0) {
 			__boardColor[i][j] = c;
 		}
 	}
-}
-
-function __updatePixels() {
-	__board.drawImage(__imgClear, 0, 0);
-	
-	for (j = 0; j < __boardHeight; j++) {
-		for (i = 0; i < __boardWidth; i++) {
-			if (__boardColor[i][j] < 0 || __boardColor[i][j] > 2)
-				console.log(__boardColor[i][j] + " is not a color...");
-			if (__boardColor[i][j] == 1)
-				__board.drawImage(__imgRed, __imgMap[j][i][0], __imgMap[j][i][1], 29, 37, __imgMap[j][i][0], __imgMap[j][i][1], 29, 37);
-			if (__boardColor[i][j] == 2)
-				__board.drawImage(__imgYellow, __imgMap[j][i][0], __imgMap[j][i][1], 29, 37, __imgMap[j][i][0], __imgMap[j][i][1], 29, 37);
-		}
-	}
-	
-	__board.font = "96px connectFour";
-	__board.textBaseline = "middle";
-	__board.textAlign = "center";
-	
-	__board.fillStyle = "#afcfef";
-	__board.fillText(__title, 309, 66);
-	
-	__board.fillStyle = "white";
-	__board.fillText(__title, 307, 64);
-	
-	__board.font = "12px sans-serif";
-	__board.fillStyle = "yellow";
-	__board.fillText(__subtitle, 307, 136);
-	
-	__board.textBaseline = "alphabetic";
-	__board.textAlign = "left";
-	__board.fillStyle = "black";
-	
-	__board.fillText(__author, 4, 616);
 }
 
 function getColor() {
