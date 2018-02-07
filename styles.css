@@ -114,6 +114,10 @@ optgroup {
 	text-align: left;
 }
 
+.guidecontent {
+	margin: .5em 1em;
+}
+
 .guide ol, .guide ul {
 	margin-left: 2.5em;
 	
