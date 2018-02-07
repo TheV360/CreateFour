@@ -121,8 +121,8 @@ $(function() {
 });
 
 function __start() {
-	__stop();
-	__running = true;
+	window.cancelAnimationFrame(__loop);
+	__running = false;
 	window.requestAnimationFrame(__enterLoop);
 }
 
@@ -132,19 +132,18 @@ function __stop() {
 }
 
 function __enterLoop() {
+	__running = true;
 	setup();
-	__loop();
 	window.requestAnimationFrame(__loop);
 }
 
 function __loop() {
-	if (__running) {
-		__poll();
-		update();
-		__updatePixels();
-		__time++;
+	__poll();
+	update();
+	__updatePixels();
+	__time++;
+	if (__running) 
 		window.requestAnimationFrame(__loop);
-	}
 }
 
 function __poll() {
