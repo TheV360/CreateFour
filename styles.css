@@ -54,11 +54,7 @@ body {
 	text-align: center;
 }
 
-.controls {
-	color: #ffffff;
-}
-
-.controls > * {
+.controls * {
 	width: 100%;
 	border: solid 1px black;
 	
@@ -66,7 +62,9 @@ body {
 	background-color: #1f2f3f;
 	
 	font-family: monospace;
-	
+}
+
+.controls > * {
 	float: left;
 }
 
@@ -116,6 +114,7 @@ optgroup {
 
 .guidecontent {
 	margin: .5em 1em;
+	border: 0;
 }
 
 .guide ol, .guide ul {
@@ -126,6 +125,10 @@ optgroup {
 
 .guide p {
 	text-indent: 1em;
+}
+
+.hidden {
+	display: none;
 }
 
 h4 {
