@@ -7,7 +7,7 @@
 	     F     O    U     R       | 
 */
 
-var __version = "v0.2";
+var __version = "v0.2.1";
 
 var __title = "Create Four";
 var __subtitle = "The Classic 7x6 Fantasy Console";
@@ -302,7 +302,7 @@ function setRect(x, y, w, h, c = getColor()) {
 
 function text(s, x, y, c = getColor()) {
 	var cx, cy;
-	s = s + "";
+	s = s.toLowercase() + "";
 	
 	setColor(c);
 	
