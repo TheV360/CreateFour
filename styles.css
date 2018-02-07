@@ -109,6 +109,14 @@ optgroup {
 	background-color: #3f7fff;
 }
 
+.guide {
+	text-align: left;
+}
+
+.guide ol, .guide ul {
+	margin-left: 2.5em;
+}
+
 br, hr {
 	clear: both;
 }
