@@ -59,6 +59,8 @@ body {
 }
 
 .controls > * {
+	margin-bottom: .5em;
+	border: solid 1px black;
 	
 	color: #ffffff;
 	background-color: #1f2f3f;
