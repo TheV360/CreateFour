@@ -54,7 +54,9 @@ body {
 	text-align: center;
 }
 
-.controls * {
+.controls > * {
+	float: left;
+	
 	width: 100%;
 	border: solid 1px black;
 	
@@ -62,10 +64,6 @@ body {
 	background-color: #1f2f3f;
 	
 	font-family: monospace;
-}
-
-.controls > * {
-	float: left;
 }
 
 .controls > *:not(:last-child) {
@@ -106,6 +104,10 @@ body {
 optgroup {
 	color: #ffffff;
 	background-color: #3f7fff;
+}
+
+#hide {
+	width: 100%;
 }
 
 .guide {
