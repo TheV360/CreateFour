@@ -302,7 +302,7 @@ function setRect(x, y, w, h, c = getColor()) {
 
 function text(s, x, y, c = getColor()) {
 	var cx, cy;
-	s = s.toLowercase() + "";
+	s = s.toLowerCase() + "";
 	
 	setColor(c);
 	
