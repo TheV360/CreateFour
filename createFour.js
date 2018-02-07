@@ -7,7 +7,7 @@
 	     F     O    U     R       | 
 */
 
-var __version = "v0.1.5";
+var __version = "v0.2";
 
 var __title = "Create Four";
 var __subtitle = "The Classic 7x6 Fantasy Console";
