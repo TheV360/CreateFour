@@ -170,6 +170,10 @@ $(function() {
 		__updatePixels();
 	});
 	
+	$("#hide").click(function() {
+		$(".guidecontent").toggleClass("hidden");
+	});
+	
 	__board = $("#board")[0].getContext("2d");
 	
 	// Reset and show board
@@ -295,7 +299,7 @@ function getPixel(x, y) {
 function setRect(x, y, w, h, c = getColor()) {
 	for (j = y; j < y + h; j++) {
 		for (i = x; i < x + w; i++) {
-			setPixel(x, y, c);
+			setPixel(i, j, c);
 		}
 	}
 }
