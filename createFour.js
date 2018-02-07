@@ -1,3 +1,5 @@
+var __version = "v0.1.2";
+
 var __title = "Create Four";
 var __subtitle = "The Classic 7x6 Fantasy Console";
 var __author = "V360";
