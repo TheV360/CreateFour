@@ -312,7 +312,7 @@ function text(s, x, y, c = getColor()) {
 				cx = x + __fontMap[s[i]][j][0];
 				cy = y + __fontMap[s[i]][j][1];
 				
-				if (cx > 0 && cx < __boardWidth && cy > 0 && cy < __boardHeight) setPixel(cx, cy);
+				if (cx > -1 && cx < __boardWidth && cy > -1 && cy < __boardHeight) setPixel(cx, cy);
 			}
 		}
 		x += 4;
