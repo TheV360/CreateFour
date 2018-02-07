@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<title>Create Four</title>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="stylesheet" href="styles.css" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="createFour.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<article>
+				<canvas id="board" tabindex="1" width="616" height="622">
+					Upgrade your browser...
+				</canvas>
+				<div class="controls">
+					<textarea id="code" tabindex="2" spellcheck="false"></textarea>
+					<input id="run" type="button" value="Run" />
+					<input id="stop" type="button" value="Stop" />
+					<br />
+					<select id="examples">
+						<option value="new.js" selected>New Program</option>
+						<optgroup label="Examples">
+							<option value="connectFour.js">Connect Four</option>
+							<option value="connecting.js">Connecting...</option>
+							<option value="lines.js">Sine Lines</option>
+							<option value="moveAround.js">Input Demo</option>
+						</optgroup>
+					</select>
+				</div>
+				<br />
+				<h6>By V360 (@TheV360gameDev)</h6>
+			</article>
+			<div id="scripts">
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,137 @@
+/*
+	Connect 4 Styles
+*/
+
+@font-face {
+    font-family: "connectFour";
+    src: url("resources/ConnectFourFont.ttf");
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+body {
+	background-color: #1f2f3f;
+}
+
+.container {
+	margin: 0 auto;
+	padding: 1em;
+	
+	height: 100%;
+	
+	color: #ffffff;
+	background-color: #1f3f7f;
+	
+	font-family: sans-serif;
+	text-align: center;
+}
+
+.container > * {
+	width: 100%;
+    overflow: hidden;
+}
+
+#board {
+	margin: 0 auto;
+	
+	width: 100%;
+	height: auto;
+	
+	text-align: center;
+}
+
+.controls {
+	color: #ffffff;
+}
+
+.controls > * {
+	
+	color: #ffffff;
+	background-color: #1f2f3f;
+	
+	font-family: monospace;
+	
+	float: left;
+}
+
+.controls textarea {
+	width: 100%;
+	height: 16em;
+	
+	background-color: #070f17;
+	
+	min-height: 4em;
+	resize: vertical;
+}
+
+.controls input {
+	width: 100%;
+	height: 1.5em;
+}
+
+.controls input[type="button"] {
+	width: 50%;
+	
+	font-weight: bold;
+}
+
+.controls input[type="button"]:hover {
+	background-color: #3f7fff;
+}
+
+.controls input[type="button"]:active {
+	background-color: #070f17;
+}
+
+.controls select {
+	width: 100%;
+	height: 1.5em;
+}
+
+optgroup {
+	color: #ffffff;
+	background-color: #3f7fff;
+}
+
+br, hr {
+	clear: both;
+}
+
+/* from prototype */ 
+/* .circle {
+	display: inline-block;
+	
+	margin: 8px;
+	
+	width: 64px;
+	height: 64px;
+	
+	background-color: #000000;
+	
+	border-radius: 32px;
+} */
+
+@media (min-width: 1024px) {
+	.container #board {
+		display: block;
+		margin-right: 1%;
+		
+		width: 59%;
+		height: auto;
+		
+		float: left;
+	}
+	
+	.container .controls {
+		display: block;
+		
+		width: 40%;
+		height: 100%;
+		
+		float: right;
+	}
+}
