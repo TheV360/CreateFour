@@ -17,6 +17,16 @@ body {
 	background-color: #1f2f3f;
 }
 
+.fontloader {
+	position: fixed;
+	top: 0px;
+	
+	width: 0px;
+	height: 0px;
+	
+	font-family: "connectFour";
+}
+
 .container {
 	margin: 0 auto;
 	padding: 1em;
