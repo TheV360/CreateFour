@@ -115,6 +115,8 @@ optgroup {
 
 .guide ol, .guide ul {
 	margin-left: 2.5em;
+	
+	list-style-position: outside;
 }
 
 br, hr {
