@@ -28,6 +28,7 @@ For more info, check the actual create four page.
 * ~Don't crash if you try to draw a pixel out of bounds~
 * ~`text(s, x, y, c)` function~
 * security
+* black
 
 ## Credits
 * Me - the coding and base images
