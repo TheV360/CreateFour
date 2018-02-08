@@ -34,7 +34,7 @@ var __loaded = 0;
 __imgClear.src = "resources/clear.png";
 __imgRed.src = "resources/red.png";
 __imgYellow.src = "resources/yellow.png";
-__imgBlack.src = "resources/yellow.png";
+__imgBlack.src = "resources/black.png";
 
 function __load() {
 	__loaded++;
