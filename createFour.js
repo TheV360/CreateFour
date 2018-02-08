@@ -245,6 +245,7 @@ function __updatePixels() {
 	
 	__board.font = "96px connectFour";
 	__board.textAlign = "center";
+	__board.textBaseline = "middle";
 	
 	__board.fillStyle = "#afcfef";
 	__board.fillText(__title, 309, 18);
@@ -257,6 +258,7 @@ function __updatePixels() {
 	__board.fillText(__subtitle, 307, 136);
 	
 	__board.textAlign = "left";
+	__board.textBaseline = "alphabetical";
 	__board.fillStyle = "black";
 	
 	__board.fillText(__author, 4, 616);
