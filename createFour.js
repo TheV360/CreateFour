@@ -248,10 +248,10 @@ function __updatePixels() {
 	__board.textBaseline = "alphabetical";
 	
 	__board.fillStyle = "#afcfef";
-	__board.fillText(__title, 309, 114);
+	__board.fillText(__title, 309, 98);
 	
 	__board.fillStyle = "white";
-	__board.fillText(__title, 307, 112);
+	__board.fillText(__title, 307, 96);
 	
 	__board.font = "12px sans-serif";
 	__board.fillStyle = "yellow";
