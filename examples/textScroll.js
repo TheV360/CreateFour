@@ -4,7 +4,7 @@ var message;
 
 function setup() {
 	var day = new Date(); // get the current day of the week as a string
-	var days = ["sunday", "monday", "tuesday", undefined, "thursday", "friday", "saturday"];
+	var days = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"];
 	
 	x = 0;
 	message = "it is " + days[day.getDay()] + ", my dudes";
