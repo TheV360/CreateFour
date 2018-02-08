@@ -242,25 +242,23 @@ function __updatePixels() {
 				__board.drawImage(__imgYellow, __imgMap[j][i][0], __imgMap[j][i][1], 29, 37, __imgMap[j][i][0], __imgMap[j][i][1], 29, 37);
 		}
 	}
-
+	
 	__board.font = "96px connectFour";
-	__board.textBaseline = "middle";
 	__board.textAlign = "center";
-
+	
 	__board.fillStyle = "#afcfef";
-	__board.fillText(__title, 309, 66);
-
+	__board.fillText(__title, 309, 18);
+	
 	__board.fillStyle = "white";
-	__board.fillText(__title, 307, 64);
-
+	__board.fillText(__title, 307, 16);
+	
 	__board.font = "12px sans-serif";
 	__board.fillStyle = "yellow";
 	__board.fillText(__subtitle, 307, 136);
-
-	__board.textBaseline = "alphabetic";
+	
 	__board.textAlign = "left";
 	__board.fillStyle = "black";
-
+	
 	__board.fillText(__author, 4, 616);
 }
 
