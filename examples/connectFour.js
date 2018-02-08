@@ -41,34 +41,39 @@ function update() {
 		
 		selection = mod(selection, 7);
 		
-		if (getTime() % 32 > 15)
+		if (getTime() % 32 > 15) {
 			setPixel(selection, 0, turn);
+		} else if (board[selection][0] != turn) {
+			setPixel(selection, 0, 0);
+		}
 	} else if (state == 1) {
-		moved = 0;
-		
-		for (j = 4; j > -1; j--) {
-			for (i = 0; i < 7; i++) {
-				if(board[i][j + 1] == 0 && board[i][j] > 0) {
-					board[i][j + 1] = board[i][j];
-					board[i][j] = 0;
-					moved++;
+		if (getTime() % 8 == 0) {
+			moved = 0;
+			
+			for (j = 4; j > -1; j--) {
+				for (i = 0; i < 7; i++) {
+					if(board[i][j + 1] == 0 && board[i][j] > 0) {
+						board[i][j + 1] = board[i][j];
+						board[i][j] = 0;
+						moved++;
+					}
 				}
 			}
-		}
-		
-		if (moved == 0) {
-			winner = didYouWin();
-			if (winner == 0) {
-				turn--;
-				if (turn < 1) turn = 2;
-				state = 0;
-			} else {
-				state = 2;
+			
+			if (moved == 0) {
+				winner = didYouWin();
+				if (winner == 0) {
+					turn--;
+					if (turn < 1) turn = 2;
+					state = 0;
+				} else {
+					state = 2;
+				}
+				selection = 3;
 			}
-			selection = 3;
 		}
 	} else if (state == 2) {
-		if (getTime() % 4 == 0) {
+		if (getTime() % 8 == 0) {
 			moved = 0;
 			
 			for (j = 5; j > -1; j--) {
