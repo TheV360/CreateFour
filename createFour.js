@@ -237,7 +237,7 @@ function __updatePixels() {
 
 	for (j = 0; j < __boardHeight; j++) {
 		for (i = 0; i < __boardWidth; i++) {
-			if (__boardColor[i][j] < 0 || __boardColor[i][j] > 2)
+			if (__boardColor[i][j] < 0 || __boardColor[i][j] > 3)
 				console.log(__boardColor[i][j] + " is not a color...");
 			if (__boardColor[i][j] == 1)
 				__board.drawImage(__imgRed, __imgMap[j][i][0], __imgMap[j][i][1], 29, 37, __imgMap[j][i][0], __imgMap[j][i][1], 29, 37);
