@@ -24,6 +24,7 @@ var __colorCurr;
 var __imgClear = new Image();
 var __imgRed = new Image();
 var __imgYellow = new Image();
+var __imgBlack = new Image();
 
 var __codeBox;
 var __running = false;
@@ -33,6 +34,7 @@ var __loaded = 0;
 __imgClear.src = "resources/clear.png";
 __imgRed.src = "resources/red.png";
 __imgYellow.src = "resources/yellow.png";
+__imgBlack.src = "resources/yellow.png";
 
 function __load() {
 	__loaded++;
@@ -42,6 +44,7 @@ function __load() {
 __imgClear.onload = __load
 __imgRed.onload = __load
 __imgYellow.onload = __load
+__imgBlack.onload = __load
 
 var __imgMap = [ // did all this for a meme, congrats me (USES Y then X, not X then Y!!!!)
 	[[240, 293], [270, 290], [300, 287], [329, 285], [357, 281], [385, 279], [414, 277]],
@@ -240,6 +243,8 @@ function __updatePixels() {
 				__board.drawImage(__imgRed, __imgMap[j][i][0], __imgMap[j][i][1], 29, 37, __imgMap[j][i][0], __imgMap[j][i][1], 29, 37);
 			if (__boardColor[i][j] == 2)
 				__board.drawImage(__imgYellow, __imgMap[j][i][0], __imgMap[j][i][1], 29, 37, __imgMap[j][i][0], __imgMap[j][i][1], 29, 37);
+			if (__boardColor[i][j] == 3)
+				__board.drawImage(__imgBlack, __imgMap[j][i][0], __imgMap[j][i][1], 29, 37, __imgMap[j][i][0], __imgMap[j][i][1], 29, 37);
 		}
 	}
 	
@@ -284,7 +289,7 @@ function getColor() {
 }
 
 function setColor(color) {
-	__colorCurr = mod(color, 3);
+	__colorCurr = mod(color, 4);
 }
 
 function setPixel(x, y, c = getColor()) {
