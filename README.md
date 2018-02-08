@@ -16,7 +16,7 @@ Inspired off [this post on me_irl](https://www.reddit.com/7uu7wg/), I thought "h
 	* 3: right
 	* 4: space
 * 7 x 6 screen
-* 3 colors (clear, red)
+* 4 colors (clear, red, yellow, black)
 
 ## How to use
 Type Javascript code into the box, change pixels with `setPixel(x, y, c)`, read pixels with `c = getPixel(x, y)`.
@@ -27,8 +27,10 @@ For more info, check the actual create four page.
 * ~Actual documentation (a small guide below the code editor)~
 * ~Don't crash if you try to draw a pixel out of bounds~
 * ~`text(s, x, y, c)` function~
-* security
-* black
+* ~black~
+* XSS security
+* saving and loading, maybe even sharing
+* completely resetting the variables when you run
 
 ## Credits
 * Me - the coding and base images
