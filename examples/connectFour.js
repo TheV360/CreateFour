@@ -92,12 +92,6 @@ function update() {
 			}
 		}
 	} else if (state == 3) {
-		if (button[4] == 1) {
-			resetTime();
-			state = 0;
-			turn = 2;
-		}
-		
 		if (winner > 0) {
 			clearPixels((getTime() % 64 > 31) * winner);
 		} else if (getTime() % 16 == 0) {
@@ -105,6 +99,15 @@ function update() {
 				board[i][j] = randInt(3);
 			});
 		};
+		
+		if (button[4] == 1) {
+			resetTime();
+			state = 0;
+			turn = 2;
+			boardFor(function(i, j) {
+				board[i][j] = 0;
+			});
+		}
 	}
 }
 
