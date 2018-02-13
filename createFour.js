@@ -300,7 +300,15 @@ function getPixel(x, y) {
 	return __boardColor[mod(x, __boardWidth)][mod(y, __boardHeight)];
 }
 
-function setRect(x, y, w, h, c = getColor()) {
+function setRect(x, y, w, h, c = getColor(), f = -1) {
+	if (f >= 0) {
+		for (j = y + 1; j < y + h - 1; j++) {
+			for (i = x + 1; i < x + w - 1; i++) {
+				setPixel(i, j, f);
+			}
+		}
+	}
+	
 	for (j = y; j < y + h; j++) {
 		for (i = x; i < x + w; i++) {
 			setPixel(i, j, c);
